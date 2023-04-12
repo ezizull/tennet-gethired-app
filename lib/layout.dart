@@ -1,10 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:gethired/utils/pages/local_navigator.dart';
 import 'package:gethired/utils/pages/reponsiveness.dart';
-import 'package:gethired/widgets/large_screen.dart';
-import 'package:gethired/widgets/side_menu.dart';
-
-import 'widgets/top_nav.dart';
 
 class SiteLayout extends StatelessWidget {
   final GlobalKey<ScaffoldState> scaffoldKey = GlobalKey();
@@ -15,12 +11,8 @@ class SiteLayout extends StatelessWidget {
     return Scaffold(
       key: scaffoldKey,
       extendBodyBehindAppBar: true,
-      appBar: topNavigationBar(context, scaffoldKey),
-      drawer: const Drawer(
-        child: SideMenu(),
-      ),
       body: ResponsiveWidget(
-          largeScreen: const LargeScreen(),
+          largeScreen: const SizedBox(),
           smallScreen: Padding(
             padding: const EdgeInsets.symmetric(horizontal: 16),
             child: localNavigator(),

@@ -1,14 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:gethired/layout.dart';
-import 'package:gethired/pages/404/error.dart';
-import 'package:gethired/pages/authentication/authentication.dart';
+import 'package:gethired/presentation/pages/404/error.dart';
 import 'package:gethired/utils/constants/colors.dart';
-import 'package:gethired/controllers/menu_controller.dart';
-import 'package:gethired/controllers/navigation_controller.dart';
+import 'package:gethired/presentation/controllers/menu_controller.dart';
+import 'package:gethired/presentation/controllers/navigation_controller.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-import 'routing/routes.dart';
+import 'presentation/routes/routes.dart';
 
 void main() {
   Get.put(CustomMenuController());
@@ -23,10 +22,9 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
-      initialRoute: authenticationPageRoute,
       unknownRoute: GetPage(
           name: '/not-found',
-          page: () => PageNotFound(),
+          page: () => const PageNotFound(),
           transition: Transition.fadeIn),
       getPages: [
         GetPage(
@@ -34,11 +32,8 @@ class MyApp extends StatelessWidget {
             page: () {
               return SiteLayout();
             }),
-        GetPage(
-            name: authenticationPageRoute, page: () => AuthenticationPage()),
       ],
       debugShowCheckedModeBanner: false,
-      title: 'Dashboard',
       theme: ThemeData(
         scaffoldBackgroundColor: light,
         textTheme: GoogleFonts.mulishTextTheme(Theme.of(context).textTheme)

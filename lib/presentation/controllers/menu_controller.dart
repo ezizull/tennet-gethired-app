@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:gethired/routing/routes.dart';
+import 'package:gethired/presentation/routes/routes.dart';
 import 'package:gethired/utils/constants/colors.dart';
 
 class CustomMenuController extends GetxController {
   static CustomMenuController instance = Get.find();
-  var activeItem = overviewPageDisplayName.obs;
+  var activeItem = homePageDisplayName.obs;
 
   var hoverItem = "".obs;
 
@@ -23,14 +23,8 @@ class CustomMenuController extends GetxController {
 
   Widget returnIconFor(String itemName) {
     switch (itemName) {
-      case overviewPageDisplayName:
+      case homePageDisplayName:
         return _customIcon(Icons.trending_up, itemName);
-      case driversPageDisplayName:
-        return _customIcon(Icons.drive_eta, itemName);
-      case clientsPageDisplayName:
-        return _customIcon(Icons.people_alt_outlined, itemName);
-      case authenticationPageDisplayName:
-        return _customIcon(Icons.exit_to_app, itemName);
       default:
         return _customIcon(Icons.exit_to_app, itemName);
     }

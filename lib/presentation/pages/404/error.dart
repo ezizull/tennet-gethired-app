@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:gethired/widgets/custom_text.dart';
 
 class PageNotFound extends StatelessWidget {
+  const PageNotFound({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -12,16 +13,18 @@ class PageNotFound extends StatelessWidget {
             "assets/images/error.png",
             width: 350,
           ),
-          SizedBox(
+          const SizedBox(
             height: 10,
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              CustomText(
-                text: "Page not found",
-                size: 24,
-                weight: FontWeight.bold,
+            children: const [
+              Text(
+                "Page not found",
+                style: TextStyle(
+                  fontSize: 24,
+                  fontWeight: FontWeight.bold,
+                ),
               ),
             ],
           )
