@@ -3,6 +3,7 @@ import 'package:gethired/layout.dart';
 import 'package:gethired/pages/404/error.dart';
 import 'package:gethired/pages/authentication/authentication.dart';
 import 'package:gethired/utils/constants/colors.dart';
+import 'package:gethired/controllers/menu_controller.dart';
 import 'package:gethired/controllers/navigation_controller.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -10,7 +11,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'routing/routes.dart';
 
 void main() {
-  Get.put(MenuController());
+  Get.put(CustomMenuController());
   Get.put(NavigationController());
   runApp(const MyApp());
 }

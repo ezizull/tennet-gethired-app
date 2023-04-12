@@ -3,8 +3,8 @@ import 'package:get/get.dart';
 import 'package:gethired/routing/routes.dart';
 import 'package:gethired/utils/constants/colors.dart';
 
-class MenuController extends GetxController {
-  static MenuController instance = Get.find();
+class CustomMenuController extends GetxController {
+  static CustomMenuController instance = Get.find();
   var activeItem = overviewPageDisplayName.obs;
 
   var hoverItem = "".obs;
