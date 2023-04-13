@@ -6,5 +6,6 @@ class RootBinding extends Bindings {
   void dependencies() {
     Get.lazyPut<BottomBarController>(() => BottomBarController());
     Get.lazyPut<HomeController>(() => HomeController());
+    Get.lazyPut<TrainingController>(() => TrainingController());
   }
 }

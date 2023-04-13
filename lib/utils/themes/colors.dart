@@ -20,6 +20,23 @@ class AppColors {
     },
   );
 
+  // White Color
+  static const MaterialColor black = MaterialColor(
+    0xFF000000,
+    {
+      50: Color(0xFF161A5F),
+      100: Color(0xFF111448),
+      200: Color(0xFF0E113C),
+      300: Color(0xFF0B0D30),
+      400: Color(0xFF090A24),
+      500: Color(0xFF060718),
+      600: Color(0xFF050612),
+      700: Color(0xFF03040C),
+      800: Color(0xFF020206),
+      900: Color(0xFF010103),
+    },
+  );
+
   // Blue Color
   static const MaterialColor blue = MaterialColor(
     0xFFD0CAF4,

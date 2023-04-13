@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import 'package:gethired/presentation/controllers/controllers.dart';
-import 'package:gethired/presentation/pages/home/home.dart';
+import 'package:gethired/presentation/pages/pages.dart';
 
 import 'widgets/bottom_bar_items.dart';
 import 'widgets/center_button.dart';
@@ -21,7 +21,7 @@ class RootPage extends StatelessWidget {
           index: controller.tabIndex,
           children: const [
             HomePage(),
-            HomePage(),
+            TrainingPage(),
             HomePage(),
             HomePage(),
           ],
