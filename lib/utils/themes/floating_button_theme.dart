@@ -4,7 +4,7 @@ import 'colors.dart';
 
 class AppFloatingButtonThemes {
   static FloatingActionButtonThemeData dark = FloatingActionButtonThemeData(
-    backgroundColor: AppColors.sea.shade800,
-    foregroundColor: AppColors.sea.shade50,
+    backgroundColor: AppColors.white.shade800,
+    foregroundColor: AppColors.white.shade50,
   );
 }
