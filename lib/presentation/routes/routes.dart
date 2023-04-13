@@ -1,15 +1,7 @@
-const rootRoute = "/";
+class Routes {
+  static Future<String> get initialRoute async {
+    return HOME;
+  }
 
-const homePageDisplayName = "Home";
-const homePageRoute = "/home";
-
-class MenuItem {
-  final String name;
-  final String route;
-
-  MenuItem(this.name, this.route);
+  static const HOME = '/home';
 }
-
-List<MenuItem> sideMenuItemRoutes = [
-  MenuItem(homePageDisplayName, homePageRoute),
-];
