@@ -6,9 +6,11 @@ class TopDetails extends StatelessWidget {
   const TopDetails({
     super.key,
     required this.title,
+    this.onTap,
   });
 
   final String title;
+  final Function()? onTap;
 
   @override
   Widget build(BuildContext context) {
@@ -21,7 +23,7 @@ class TopDetails extends StatelessWidget {
               style:
                   AppFonts.redHatDisplay(AppColors.white.shade700).titleSmall),
           InkWell(
-            onTap: () {},
+            onTap: () => onTap,
             child: Padding(
               padding: const EdgeInsets.symmetric(horizontal: 5),
               child:

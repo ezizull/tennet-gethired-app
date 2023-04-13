@@ -33,34 +33,50 @@ class HeaderWidget extends StatelessWidget {
             children: [
               // arrow
               Container(
-                margin: const EdgeInsets.only(right: 15),
-                child: const Icon(FontAwesomeIcons.angleLeft, size: 14),
+                margin: const EdgeInsets.only(right: 10),
+                height: 20,
+                width: 20,
+                child: InkWell(
+                  onTap: () {},
+                  child: const Icon(FontAwesomeIcons.angleLeft, size: 14),
+                ),
               ),
 
               // date
-              Row(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  Container(
-                    margin: const EdgeInsets.only(right: 6),
-                    child: const Icon(
-                      FontAwesomeIcons.calendar,
-                      size: 17,
-                    ),
+              InkWell(
+                onTap: () {},
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 5),
+                  child: Row(
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      Container(
+                        margin: const EdgeInsets.only(right: 6),
+                        child: const Icon(
+                          FontAwesomeIcons.calendar,
+                          size: 17,
+                        ),
+                      ),
+                      Text(
+                        date,
+                        style: AppFonts.redHatDisplay(
+                          AppColors.black.shade700,
+                        ).bodyMedium,
+                      ),
+                    ],
                   ),
-                  Text(
-                    date,
-                    style: AppFonts.redHatDisplay(
-                      AppColors.black.shade700,
-                    ).bodyMedium,
-                  ),
-                ],
+                ),
               ),
 
               // arrow
               Container(
-                margin: const EdgeInsets.only(left: 15),
-                child: const Icon(FontAwesomeIcons.angleRight, size: 14),
+                margin: const EdgeInsets.only(left: 10),
+                height: 20,
+                width: 20,
+                child: InkWell(
+                  onTap: () {},
+                  child: const Icon(FontAwesomeIcons.angleRight, size: 14),
+                ),
               ),
             ],
           ),
