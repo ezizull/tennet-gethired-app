@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:gethired/utils/theme/button_theme.dart';
-import 'package:gethired/utils/theme/elevated_button_theme.dart';
-import 'package:gethired/utils/theme/floating_button_theme.dart';
-import 'package:gethired/utils/theme/switch_theme.dart';
+import 'package:gethired/utils/themes/button_theme.dart';
+import 'package:gethired/utils/themes/elevated_button_theme.dart';
+import 'package:gethired/utils/themes/floating_button_theme.dart';
+import 'package:gethired/utils/themes/switch_theme.dart';
 
 import 'bar_theme.dart';
 import 'colors.dart';

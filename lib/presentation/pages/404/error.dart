@@ -9,13 +9,13 @@ class PageNotFound extends StatelessWidget {
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Image.asset(
-            "assets/images/error.png",
-            width: 350,
-          ),
-          const SizedBox(
-            height: 10,
-          ),
+          // image
+          Image.asset("assets/images/error.png", width: 350),
+
+          // space
+          const SizedBox(height: 10),
+
+          // text
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: const [
