@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
 import 'package:gethired/presentation/controllers/controllers.dart';
 import 'package:gethired/utils/utils.dart';
@@ -18,6 +19,7 @@ class HomePage extends GetView<HomeController> {
             title: "My Diary",
             date: "15 May",
           ),
+          TopDetails(title: "Mediterranean diet"),
         ],
       ),
     );

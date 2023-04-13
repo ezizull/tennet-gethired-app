@@ -24,7 +24,7 @@ class HeaderWidget extends StatelessWidget {
             title,
             style: AppFonts.redHatDisplay(
               AppColors.black.shade700,
-            ).displayLarge,
+            ).titleLarge,
           ),
 
           // date
