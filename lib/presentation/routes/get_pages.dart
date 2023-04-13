@@ -11,13 +11,6 @@ class GetPages {
       page: () => const RootPage(),
       binding: RootBinding(),
     ),
-
-    // home
-    GetPage(
-      name: Routes.HOME,
-      page: () => const HomePage(),
-      binding: HomeBinding(),
-    ),
   ];
 
   static GetPage notFound = GetPage(
