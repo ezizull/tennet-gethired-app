@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:gethired/utils/themes/themes.dart';
 
-class TopDetails extends StatelessWidget {
-  const TopDetails({
+class TextHeadlineWidget extends StatelessWidget {
+  const TextHeadlineWidget({
     super.key,
     required this.title,
     this.onTap,

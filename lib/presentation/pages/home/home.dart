@@ -9,6 +9,7 @@ import 'package:percent_indicator/linear_percent_indicator.dart';
 
 import 'widgets/status_activity.dart';
 import 'widgets/status_gizi.dart';
+import 'widgets/meals_headline.dart';
 
 class HomePage extends GetView<HomeController> {
   const HomePage({super.key});
@@ -21,19 +22,25 @@ class HomePage extends GetView<HomeController> {
         physics: const BouncingScrollPhysics(
             parent: AlwaysScrollableScrollPhysics()),
         children: [
+          // header app
           const HeaderWidget(
             title: "My Diary",
             date: "15 May",
           ),
-          TopDetails(
+
+          // status headline
+          TextHeadlineWidget(
             title: "Mediterranean diet",
             onTap: () {},
           ),
+
+          // status headline
           CardHeadlineWidget(
             color: AppColors.white,
             padding:
                 const EdgeInsets.only(top: 24, bottom: 15, left: 20, right: 20),
-            margin: const EdgeInsets.symmetric(horizontal: 20, vertical: 16),
+            margin:
+                const EdgeInsets.only(top: 16, bottom: 20, left: 20, right: 20),
             child: Column(children: [
               // activity
               Container(
@@ -118,6 +125,19 @@ class HomePage extends GetView<HomeController> {
               )
             ]),
           ),
+
+          // meals headline
+          TextHeadlineWidget(
+            title: "Meals Today",
+            onTap: () {},
+          ),
+
+          // meals headline
+          Container(
+            height: 165,
+            margin: const EdgeInsets.only(top: 10),
+            child: const MealsHeadline(),
+          )
         ],
       ),
     );

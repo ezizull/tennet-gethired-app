@@ -41,6 +41,7 @@ class CircularPercentIndicatorWidget extends StatelessWidget {
                     title!,
                     style: AppFonts.redHatDisplay(
                       AppColors.blue.shade500,
+                      height: 1,
                     ).titleMedium,
                   ),
                 ],
@@ -49,6 +50,7 @@ class CircularPercentIndicatorWidget extends StatelessWidget {
                     subTitle!,
                     style: AppFonts.redHatDisplay(
                       AppColors.white.shade500,
+                      height: 1,
                     ).displaySmall,
                   ),
                 ],

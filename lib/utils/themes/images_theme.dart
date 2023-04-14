@@ -8,4 +8,13 @@ class AppImages {
 
   // eat
   static const eatBowl = AssetImage("$baseUrl/eat-bowl.png");
+
+  // breakfast
+  static const breakfastDonut = AssetImage("$baseUrl/breakfast-donut.png");
+
+  // lunch
+  static const lunchKakigori = AssetImage("$baseUrl/lunch-kakigori.png");
+
+  // snack
+  static const snackBerries = AssetImage("$baseUrl/snack-berries.png");
 }
