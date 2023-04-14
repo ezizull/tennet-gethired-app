@@ -48,42 +48,39 @@ class CardImageWidget extends StatelessWidget {
       child: Stack(
         children: [
           // card
-          InkWell(
-            onTap: () {},
-            child: Container(
-              height: height,
-              width: width,
-              margin: const EdgeInsets.only(top: 20),
-              decoration: BoxDecoration(
-                color: color,
-                gradient: gradient,
-                borderRadius: borderRadius,
-                boxShadow: [
-                  BoxShadow(
-                    color: shadowColor,
-                    spreadRadius: 1,
-                    blurRadius: 7,
-                    offset: const Offset(0, 3),
-                  ),
-                ],
-              ),
-              clipBehavior: Clip.hardEdge,
-              child: Stack(children: [
-                Positioned(
-                  left: -5,
-                  top: -30,
-                  child: CircleAvatar(
-                    radius: 36,
-                    backgroundColor: AppColors.white.shade100.withOpacity(0.2),
-                  ),
+          Container(
+            height: height,
+            width: width,
+            margin: const EdgeInsets.only(top: 20),
+            decoration: BoxDecoration(
+              color: color,
+              gradient: gradient,
+              borderRadius: borderRadius,
+              boxShadow: [
+                BoxShadow(
+                  color: shadowColor,
+                  spreadRadius: 1,
+                  blurRadius: 7,
+                  offset: const Offset(0, 3),
                 ),
-                SizedBox(
-                  width: double.infinity,
-                  height: double.infinity,
-                  child: child,
-                )
-              ]),
+              ],
             ),
+            clipBehavior: Clip.hardEdge,
+            child: Stack(children: [
+              Positioned(
+                left: -5,
+                top: -30,
+                child: CircleAvatar(
+                  radius: 36,
+                  backgroundColor: AppColors.white.shade100.withOpacity(0.2),
+                ),
+              ),
+              SizedBox(
+                width: double.infinity,
+                height: double.infinity,
+                child: child,
+              )
+            ]),
           ),
 
           // image

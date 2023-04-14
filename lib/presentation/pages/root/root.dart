@@ -3,9 +3,9 @@ import 'package:get/get.dart';
 
 import 'package:gethired/presentation/controllers/controllers.dart';
 import 'package:gethired/presentation/pages/pages.dart';
+import 'package:gethired/utils/utils.dart';
 
 import 'widgets/bottom_bar_items.dart';
-import 'widgets/center_button.dart';
 
 class RootPage extends StatelessWidget {
   const RootPage({super.key});
@@ -23,11 +23,17 @@ class RootPage extends StatelessWidget {
             HomePage(),
             TrainingPage(),
             HomePage(),
-            HomePage(),
+            TrainingPage(),
           ],
         ),
         floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
-        floatingActionButton: const CenterPlusButton(),
+        floatingActionButton: CenterPlusButton(
+            plusColor: AppColors.white,
+            gradient: LinearGradient(
+              colors: [AppColors.blue.shade100, AppColors.blue.shade800],
+              begin: Alignment.bottomRight,
+              end: Alignment.topLeft,
+            )),
         bottomNavigationBar: BottomBarItems(controller: controller),
       );
     });

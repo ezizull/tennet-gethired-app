@@ -234,7 +234,7 @@ class MealsHeadline extends StatelessWidget {
           margin: const EdgeInsets.only(left: 15),
           image: AppImages.snackBerries,
           child: Padding(
-            padding: const EdgeInsets.all(10),
+            padding: const EdgeInsets.only(top: 10, left: 10, right: 10),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -271,6 +271,16 @@ class MealsHeadline extends StatelessWidget {
                       ),
                     ],
                   ),
+                ),
+
+                // satuan
+                CenterPlusButton(
+                  width: 32,
+                  height: 32,
+                  margin: const EdgeInsets.only(top: 15),
+                  plusColor: AppColors.red.shade400,
+                  color: AppColors.white,
+                  elevation: 10,
                 ),
               ],
             ),
