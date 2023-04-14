@@ -14,6 +14,8 @@ class CardImageWidget extends StatelessWidget {
 
   static const Color defaultShadowColor = Colors.black12;
 
+  static void defaultOnTap() {}
+
   const CardImageWidget({
     super.key,
     this.child,
@@ -27,6 +29,7 @@ class CardImageWidget extends StatelessWidget {
     this.margin,
     this.borderRadius = defaultBorderRadius,
     required this.image,
+    this.onTap = defaultOnTap,
   });
 
   final Widget? child;
@@ -38,54 +41,64 @@ class CardImageWidget extends StatelessWidget {
   final double? imgWidth;
   final Color shadowColor;
   final EdgeInsetsGeometry? margin;
-  final BorderRadiusGeometry? borderRadius;
+  final BorderRadius? borderRadius;
   final ImageProvider<Object> image;
+  final Function()? onTap;
 
   @override
   Widget build(BuildContext context) {
     return Container(
       margin: margin,
       child: Stack(
+        alignment: Alignment.bottomCenter,
         children: [
           // card
-          Container(
-            height: height,
-            width: width,
-            margin: const EdgeInsets.only(top: 20),
-            decoration: BoxDecoration(
-              color: color,
-              gradient: gradient,
+          ClipRRect(
+            borderRadius: borderRadius,
+            child: InkWell(
+              onTap: onTap,
               borderRadius: borderRadius,
-              boxShadow: [
-                BoxShadow(
-                  color: shadowColor,
-                  spreadRadius: 1,
-                  blurRadius: 7,
-                  offset: const Offset(0, 3),
+              splashColor: AppColors.white.withOpacity(0.2),
+              child: Ink(
+                height: height,
+                width: width,
+                decoration: BoxDecoration(
+                  color: color,
+                  gradient: gradient,
+                  borderRadius: borderRadius,
+                  boxShadow: [
+                    BoxShadow(
+                      color: shadowColor,
+                      spreadRadius: 1,
+                      blurRadius: 7,
+                      offset: const Offset(0, 3),
+                    ),
+                  ],
                 ),
-              ],
-            ),
-            clipBehavior: Clip.hardEdge,
-            child: Stack(children: [
-              Positioned(
-                left: -5,
-                top: -30,
-                child: CircleAvatar(
-                  radius: 36,
-                  backgroundColor: AppColors.white.shade100.withOpacity(0.2),
-                ),
+                child: Stack(children: [
+                  Positioned(
+                    left: -5,
+                    top: -30,
+                    child: CircleAvatar(
+                      radius: 36,
+                      backgroundColor:
+                          AppColors.white.shade100.withOpacity(0.2),
+                    ),
+                  ),
+                  SizedBox(
+                    width: double.infinity,
+                    height: double.infinity,
+                    child: child,
+                  )
+                ]),
               ),
-              SizedBox(
-                width: double.infinity,
-                height: double.infinity,
-                child: child,
-              )
-            ]),
+            ),
           ),
 
           // image
           Positioned(
             left: 10,
+            top: 0,
             child: Stack(
               children: [
                 // image
