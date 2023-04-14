@@ -39,35 +39,52 @@ class AppColors {
 
   // Blue Color
   static const MaterialColor blue = MaterialColor(
-    0xFFD0CAF4,
+    0xFF2B34BE,
     {
-      50: Color(0xFFA095E9),
-      100: Color(0xFF8D80E4),
-      200: Color(0xFF7A6BE0),
-      300: Color(0xFF6755DB),
-      400: Color(0xFF584DD4),
-      500: Color(0xFF4945CD),
-      600: Color(0xFF2B34BE),
+      50: Color(0xFFD0CAF4),
+      100: Color(0xFFA095E9),
+      200: Color(0xFF8D80E4),
+      300: Color(0xFF7A6BE0),
+      400: Color(0xFF6755DB),
+      500: Color(0xFF584DD4),
+      600: Color(0xFF4945CD),
       700: Color(0xFF262EA7),
       800: Color(0xFF21278F),
       900: Color(0xFF1C2177),
     },
   );
 
-  // Gold Color
-  static const MaterialColor gold = MaterialColor(
-    0xFFE6B325,
+  // Red color
+  static const MaterialColor red = MaterialColor(
+    0xFFC9184A,
     {
-      50: Color(0xFFFEF5AC),
-      100: Color(0xFFFFE9A0),
-      200: Color(0xFFF0E161),
-      300: Color(0xFFF0E161),
-      400: Color(0xFFD9CB50),
-      500: Color(0xFFD9CB50),
-      600: Color(0xFFD9CB50),
-      700: Color(0xFFC0B236),
-      800: Color(0xFFBF9742),
-      900: Color(0xFF61481C),
+      50: Color(0xFFFFF0F3),
+      100: Color(0xFFFFCCD5),
+      200: Color(0xFFFFB3C1),
+      300: Color(0xFFFF8FA3),
+      400: Color(0xFFFF758F),
+      500: Color(0xFFFF4D6D),
+      600: Color(0xFFA4133C),
+      700: Color(0xFF800F2F),
+      800: Color(0xFF590D22),
+      900: Color(0xFF510C1F),
+    },
+  );
+
+  // Yellow Color
+  static const MaterialColor yellow = MaterialColor(
+    0xFFFFD400,
+    {
+      50: Color(0xFFFFFAE5),
+      100: Color(0xFFFFF2B2),
+      200: Color(0xFFFFE97F),
+      300: Color(0xFFFFE14C),
+      400: Color(0xFFFFDD32),
+      500: Color(0xFFFFDB26),
+      600: Color(0xFFFFD819),
+      700: Color(0xFFC09F00),
+      800: Color(0xFFAF9100),
+      900: Color(0xFF9F8400),
     },
   );
 }

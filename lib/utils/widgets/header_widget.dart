@@ -15,7 +15,7 @@ class HeaderWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 15),
+      padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
@@ -61,7 +61,7 @@ class HeaderWidget extends StatelessWidget {
                         date,
                         style: AppFonts.redHatDisplay(
                           AppColors.black.shade700,
-                        ).bodyMedium,
+                        ).bodyLarge,
                       ),
                     ],
                   ),

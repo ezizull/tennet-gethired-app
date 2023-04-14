@@ -32,7 +32,7 @@ class TopDetails extends StatelessWidget {
                     margin: const EdgeInsets.only(right: 5),
                     child: Text("Details",
                         style: AppFonts.redHatDisplay(AppColors.blue.shade500)
-                            .bodySmall)),
+                            .bodyMedium)),
                 const Icon(FontAwesomeIcons.arrowRight, size: 12)
               ]),
             ),
