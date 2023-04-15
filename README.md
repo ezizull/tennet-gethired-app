@@ -37,9 +37,7 @@ This repository contains the codebase for a diet tracking application built with
   cd build/app/outputs/apk/release
 ```
 
-##### install **app-release.apk** to **Phone** or **Emulator**
-
-####
+install **app-release.apk** to **Phone** or **Emulator**
 
 If you prefer not to build the APK file yourself, you can download this file and install it.
 
