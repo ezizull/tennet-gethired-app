@@ -57,7 +57,7 @@ open URL **localhost:5050** in the browser
 
 ####
 
-If you prefer not to build the Web files yourself, you can download this directory.
+If you prefer not to build the Web files yourself, you can download my **latest build**
 
 [![Website App](https://img.shields.io/badge/Website%20App-0078D7?style=for-the-badge&logo=google-chrome&logoColor=white)](https://github.com/ezizull/tennet-gethired-app/tree/master/build/web)
 
