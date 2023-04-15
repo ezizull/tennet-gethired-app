@@ -31,8 +31,18 @@ migrate_working_dir/
 .pub-cache/
 .pub/
 /build/*
+
+/build/app/generated/
+/build/app/intermediates/
+/build/app/kotlin/
+/build/app/kotlinToolingMetadata/
+/build/app/kotlin/
+/build/app/snapshot/
+/build/app/tmp/
+/build/app/flutter-apk/
+
 !/build/web/
-!/build/app/outputs/apk/release/
+!/build/app/
 
 # Symbolication related
 app.*.symbols
