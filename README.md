@@ -77,6 +77,5 @@ Or you cant just **run** my latest build. Using 1 of 2 command below
 ```
 
 ```bash
-  cd build/web
   python -m http.server 5050 --directory build/web
 ```
