@@ -41,8 +41,7 @@ class AppBarWaveWidgetClipper extends CustomClipper<Path> {
     path.lineTo(0.0, size.height - p1Diff);
 
     // rounded
-    path.quadraticBezierTo(
-        size.width * 0.01, size.height, size.width * 0.25, size.height);
+    path.quadraticBezierTo(size.width * 0.01, size.height, 100, size.height);
 
     path.lineTo(size.width, size.height);
     path.lineTo(size.width, 0.0);

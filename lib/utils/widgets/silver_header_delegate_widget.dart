@@ -13,15 +13,20 @@ class SilverHeaderDelegateWidget extends SliverPersistentHeaderDelegate {
         shrinkOffset > minExtent ? minExtent : shrinkOffset;
 
     double offset = (minExtent - adjustedShrinkOffset) * 0.04;
-    double topPadding = MediaQuery.of(context).padding.top + 10;
+    double topPadding = MediaQuery.of(context).padding.top + 20;
 
     bool showNavigate = shrinkOffset > minExtent ? false : true;
 
+    debugPrint("$shrinkOffset $overlapsContent");
+
     return Stack(
       children: [
+        // background
         const AppBarWaveWidget(
           height: 200,
         ),
+
+        // element
         Positioned(
           top: topPadding + offset,
           left: 16,
@@ -68,124 +73,140 @@ class SilverHeaderDelegateWidget extends SliverPersistentHeaderDelegate {
 
               // searchbar
               const SearchBarWidget(),
-
-              // options
-              Container(
-                margin:
-                    EdgeInsets.only(left: showNavigate ? 65 : 40, right: 40),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
-                    // search
-                    Container(
-                      width: 60,
-                      decoration: const BoxDecoration(
-                        border: Border(
-                          bottom: BorderSide(width: 3, color: AppColors.white),
-                        ),
-                      ),
-                      child: FloatingActionButton(
-                        onPressed: () {},
-                        elevation: 0,
-                        heroTag: null,
-                        shape: const BeveledRectangleBorder(),
-                        backgroundColor: AppColors.transparent,
-                        child: Text(
-                          "Search",
-                          style: AppFonts.redHatDisplay(
-                            AppColors.white,
-                            fontWeight: FontWeight.w400,
-                          ).labelSmall,
-                        ),
-                      ),
-                    ),
-
-                    // my food
-                    Container(
-                      width: 60,
-                      decoration: const BoxDecoration(
-                        border: Border(
-                          bottom: BorderSide(
-                            width: 2,
-                            color: AppColors.transparent,
-                          ),
-                        ),
-                      ),
-                      child: FloatingActionButton(
-                        onPressed: () {},
-                        elevation: 0,
-                        heroTag: null,
-                        shape: const BeveledRectangleBorder(),
-                        backgroundColor: AppColors.transparent,
-                        child: Text(
-                          "My Foods",
-                          style: AppFonts.redHatDisplay(
-                            AppColors.white.withOpacity(0.6),
-                            fontWeight: FontWeight.w400,
-                          ).labelSmall,
-                        ),
-                      ),
-                    ),
-
-                    // meals
-                    Container(
-                      width: 60,
-                      decoration: const BoxDecoration(
-                        border: Border(
-                          bottom: BorderSide(
-                            width: 2,
-                            color: AppColors.transparent,
-                          ),
-                        ),
-                      ),
-                      child: FloatingActionButton(
-                        onPressed: () {},
-                        elevation: 0,
-                        heroTag: null,
-                        shape: const BeveledRectangleBorder(),
-                        backgroundColor: AppColors.transparent,
-                        child: Text(
-                          "Meals",
-                          style: AppFonts.redHatDisplay(
-                            AppColors.white.withOpacity(0.6),
-                            fontWeight: FontWeight.w400,
-                          ).labelSmall,
-                        ),
-                      ),
-                    ),
-
-                    // recipes
-                    Container(
-                      width: 60,
-                      alignment: Alignment.center,
-                      decoration: const BoxDecoration(
-                        border: Border(
-                          bottom: BorderSide(
-                            width: 2,
-                            color: AppColors.transparent,
-                          ),
-                        ),
-                      ),
-                      child: FloatingActionButton(
-                        onPressed: () {},
-                        elevation: 0,
-                        heroTag: null,
-                        shape: const BeveledRectangleBorder(),
-                        backgroundColor: AppColors.transparent,
-                        child: Text(
-                          "Recipes",
-                          style: AppFonts.redHatDisplay(
-                            AppColors.white.withOpacity(0.6),
-                            fontWeight: FontWeight.w400,
-                          ).labelSmall,
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
-              ),
             ],
+          ),
+        ),
+
+        // options
+        Positioned(
+          left: 16,
+          right: 16,
+          bottom: 0,
+          child: Container(
+            margin: EdgeInsets.only(left: showNavigate ? 70 : 40, right: 40),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                // search
+                Container(
+                  width: 60,
+                  decoration: const BoxDecoration(
+                    border: Border(
+                      bottom: BorderSide(width: 3, color: AppColors.white),
+                    ),
+                  ),
+                  child: FloatingActionButton(
+                    onPressed: () {},
+                    elevation: 0,
+                    heroTag: null,
+                    shape: const BeveledRectangleBorder(),
+                    hoverElevation: 0,
+                    highlightElevation: 0,
+                    // focusElevation: 0,
+                    backgroundColor: AppColors.transparent,
+                    child: Text(
+                      "Search",
+                      style: AppFonts.redHatDisplay(
+                        AppColors.white,
+                        fontWeight: FontWeight.w400,
+                      ).labelSmall,
+                    ),
+                  ),
+                ),
+
+                // my food
+                Container(
+                  width: 60,
+                  decoration: const BoxDecoration(
+                    border: Border(
+                      bottom: BorderSide(
+                        width: 2,
+                        color: AppColors.transparent,
+                      ),
+                    ),
+                  ),
+                  child: FloatingActionButton(
+                    onPressed: () {},
+                    elevation: 0,
+                    heroTag: null,
+                    shape: const BeveledRectangleBorder(),
+                    hoverElevation: 0,
+                    highlightElevation: 0,
+                    // focusElevation: 0,
+                    backgroundColor: AppColors.transparent,
+                    child: Text(
+                      "My Foods",
+                      style: AppFonts.redHatDisplay(
+                        AppColors.white.withOpacity(0.6),
+                        fontWeight: FontWeight.w400,
+                      ).labelSmall,
+                    ),
+                  ),
+                ),
+
+                // meals
+                Container(
+                  width: 60,
+                  decoration: const BoxDecoration(
+                    border: Border(
+                      bottom: BorderSide(
+                        width: 2,
+                        color: AppColors.transparent,
+                      ),
+                    ),
+                  ),
+                  child: FloatingActionButton(
+                    onPressed: () {},
+                    elevation: 0,
+                    heroTag: null,
+                    shape: const BeveledRectangleBorder(),
+                    hoverElevation: 0,
+                    highlightElevation: 0,
+                    // focusElevation: 0,
+                    backgroundColor: AppColors.transparent,
+                    child: Text(
+                      "Meals",
+                      style: AppFonts.redHatDisplay(
+                        AppColors.white.withOpacity(0.6),
+                        fontWeight: FontWeight.w400,
+                      ).labelSmall,
+                    ),
+                  ),
+                ),
+
+                // recipes
+                Container(
+                  width: 60,
+                  alignment: Alignment.center,
+                  decoration: const BoxDecoration(
+                    border: Border(
+                      bottom: BorderSide(
+                        width: 2,
+                        color: AppColors.transparent,
+                      ),
+                    ),
+                  ),
+                  child: FloatingActionButton(
+                    onPressed: () {},
+                    elevation: 0,
+                    heroTag: null,
+                    shape: const BeveledRectangleBorder(),
+                    hoverElevation: 0,
+                    highlightElevation: 0,
+                    // focusElevation: 0,
+                    backgroundColor: AppColors.transparent,
+                    child: Text(
+                      "Recipes",
+                      style: AppFonts.redHatDisplay(
+                        AppColors.white.withOpacity(0.6),
+                        fontWeight: FontWeight.w400,
+                      ).labelSmall,
+                    ),
+                  ),
+                ),
+              ],
+            ),
           ),
         )
       ],
