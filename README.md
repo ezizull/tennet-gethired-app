@@ -69,7 +69,7 @@ If you prefer not to build the Web files yourself, you can download this directo
 
 ###
 
-Or you cant just **run** my latest build. Using 1 of 2 command below
+Or you cant just **run** my **latest build**. Using **1** of **2** command below
 
 ```bash
   cd build/web
