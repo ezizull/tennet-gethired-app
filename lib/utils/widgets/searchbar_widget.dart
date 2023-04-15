@@ -19,7 +19,7 @@ class SearchBarWidget extends StatelessWidget {
           focusedBorder: _border(AppColors.blue.shade200),
           border: _border(AppColors.white.shade200),
           enabledBorder: _border(AppColors.white.shade200),
-          hintText: 'Start food or brand',
+          hintText: 'Search food or brand',
           hintStyle: AppFonts.redHatDisplay(
             AppColors.black.withOpacity(0.55),
           ).bodyMedium,

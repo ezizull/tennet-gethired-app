@@ -23,7 +23,11 @@ class SilverHeaderDelegateWidget extends SliverPersistentHeaderDelegate {
           top: topPadding + offset,
           left: 16,
           right: 16,
-          child: const SearchBarWidget(),
+          child: Column(
+            children: const [
+              SearchBarWidget(),
+            ],
+          ),
         )
       ],
     );

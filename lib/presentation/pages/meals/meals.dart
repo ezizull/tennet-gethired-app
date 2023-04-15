@@ -4,6 +4,8 @@ import 'package:get/get.dart';
 import 'package:gethired/presentation/controllers/controllers.dart';
 import 'package:gethired/utils/utils.dart';
 
+import 'widgets/meals_list.dart';
+
 class MealsPage extends GetView<MealsController> {
   const MealsPage({super.key});
 
@@ -12,23 +14,15 @@ class MealsPage extends GetView<MealsController> {
     return Scaffold(
       resizeToAvoidBottomInset: false,
       body: CustomScrollView(
+        physics: const BouncingScrollPhysics(
+            parent: AlwaysScrollableScrollPhysics()),
         slivers: [
           const SliverPersistentHeader(
             floating: true,
             delegate: SilverHeaderDelegateWidget(),
             pinned: true,
           ),
-          SliverList(
-              delegate:
-                  SliverChildBuilderDelegate((BuildContext context, int index) {
-            return Container(
-                margin: const EdgeInsets.all(8),
-                padding: const EdgeInsets.all(16),
-                child: const Text(
-                  'Cruelty-free brand',
-                  style: TextStyle(fontSize: 20),
-                ));
-          }, childCount: 20))
+          MealsList(controller: controller)
         ],
       ),
       floatingActionButton: FloatButtonWidget(
