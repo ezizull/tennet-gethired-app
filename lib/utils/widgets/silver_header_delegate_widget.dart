@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-
-import 'appbar_wave_widget.dart';
-import 'searchbar_widget.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:get/get.dart';
+import 'package:gethired/utils/utils.dart';
 
 class SilverHeaderDelegateWidget extends SliverPersistentHeaderDelegate {
   const SilverHeaderDelegateWidget();
@@ -11,8 +11,11 @@ class SilverHeaderDelegateWidget extends SliverPersistentHeaderDelegate {
       BuildContext context, double shrinkOffset, bool overlapsContent) {
     var adjustedShrinkOffset =
         shrinkOffset > minExtent ? minExtent : shrinkOffset;
-    double offset = (minExtent - adjustedShrinkOffset) * 0.35;
+
+    double offset = (minExtent - adjustedShrinkOffset) * 0.04;
     double topPadding = MediaQuery.of(context).padding.top + 10;
+
+    bool showNavigate = shrinkOffset > minExtent ? false : true;
 
     return Stack(
       children: [
@@ -24,8 +27,164 @@ class SilverHeaderDelegateWidget extends SliverPersistentHeaderDelegate {
           left: 16,
           right: 16,
           child: Column(
-            children: const [
-              SearchBarWidget(),
+            children: [
+              if (showNavigate) ...[
+                // appbar
+                Container(
+                  margin: const EdgeInsets.only(bottom: 6, left: 5, right: 5),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      // back button
+                      IconButton(
+                        onPressed: () => Get.back(),
+                        iconSize: 14,
+                        color: AppColors.white,
+                        icon: const Icon(FontAwesomeIcons.arrowLeftLong),
+                      ),
+
+                      // title
+                      Text(
+                        "Lunch",
+                        textAlign: TextAlign.center,
+                        style: AppFonts.redHatDisplay(
+                          AppColors.white,
+                          fontWeight: FontWeight.w800,
+                        ).labelMedium,
+                      ),
+
+                      // edit button
+                      IconButton(
+                        onPressed: () {},
+                        iconSize: 14,
+                        color: AppColors.white,
+                        icon: const Icon(FontAwesomeIcons.penToSquare),
+                      ),
+                    ],
+                  ),
+                ),
+              ],
+
+              // searchbar
+              const SearchBarWidget(),
+
+              // options
+              Container(
+                margin:
+                    EdgeInsets.only(left: showNavigate ? 65 : 40, right: 40),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    // search
+                    Container(
+                      width: 60,
+                      decoration: const BoxDecoration(
+                        border: Border(
+                          bottom: BorderSide(width: 3, color: AppColors.white),
+                        ),
+                      ),
+                      child: FloatingActionButton(
+                        onPressed: () {},
+                        elevation: 0,
+                        heroTag: null,
+                        shape: const BeveledRectangleBorder(),
+                        backgroundColor: AppColors.transparent,
+                        child: Text(
+                          "Search",
+                          style: AppFonts.redHatDisplay(
+                            AppColors.white,
+                            fontWeight: FontWeight.w400,
+                          ).labelSmall,
+                        ),
+                      ),
+                    ),
+
+                    // my food
+                    Container(
+                      width: 60,
+                      decoration: const BoxDecoration(
+                        border: Border(
+                          bottom: BorderSide(
+                            width: 2,
+                            color: AppColors.transparent,
+                          ),
+                        ),
+                      ),
+                      child: FloatingActionButton(
+                        onPressed: () {},
+                        elevation: 0,
+                        heroTag: null,
+                        shape: const BeveledRectangleBorder(),
+                        backgroundColor: AppColors.transparent,
+                        child: Text(
+                          "My Foods",
+                          style: AppFonts.redHatDisplay(
+                            AppColors.white.withOpacity(0.6),
+                            fontWeight: FontWeight.w400,
+                          ).labelSmall,
+                        ),
+                      ),
+                    ),
+
+                    // meals
+                    Container(
+                      width: 60,
+                      decoration: const BoxDecoration(
+                        border: Border(
+                          bottom: BorderSide(
+                            width: 2,
+                            color: AppColors.transparent,
+                          ),
+                        ),
+                      ),
+                      child: FloatingActionButton(
+                        onPressed: () {},
+                        elevation: 0,
+                        heroTag: null,
+                        shape: const BeveledRectangleBorder(),
+                        backgroundColor: AppColors.transparent,
+                        child: Text(
+                          "Meals",
+                          style: AppFonts.redHatDisplay(
+                            AppColors.white.withOpacity(0.6),
+                            fontWeight: FontWeight.w400,
+                          ).labelSmall,
+                        ),
+                      ),
+                    ),
+
+                    // recipes
+                    Container(
+                      width: 60,
+                      alignment: Alignment.center,
+                      decoration: const BoxDecoration(
+                        border: Border(
+                          bottom: BorderSide(
+                            width: 2,
+                            color: AppColors.transparent,
+                          ),
+                        ),
+                      ),
+                      child: FloatingActionButton(
+                        onPressed: () {},
+                        elevation: 0,
+                        heroTag: null,
+                        shape: const BeveledRectangleBorder(),
+                        backgroundColor: AppColors.transparent,
+                        child: Text(
+                          "Recipes",
+                          style: AppFonts.redHatDisplay(
+                            AppColors.white.withOpacity(0.6),
+                            fontWeight: FontWeight.w400,
+                          ).labelSmall,
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
             ],
           ),
         )

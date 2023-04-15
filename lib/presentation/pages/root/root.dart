@@ -18,6 +18,7 @@ class RootPage extends StatelessWidget {
     return GetBuilder<BottomBarController>(builder: (context) {
       return Scaffold(
         extendBody: true,
+        resizeToAvoidBottomInset: false,
         body: IndexedStack(
           index: controller.tabIndex,
           children: const [

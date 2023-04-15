@@ -21,8 +21,6 @@ class MealsList extends StatelessWidget {
           bool sameStatus = launch[index].status == launch[nextIndex].status;
           bool showStatus = launch[index].status != launch[oldIndex].status;
 
-          debugPrint("current $index $sameStatus");
-
           return Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [

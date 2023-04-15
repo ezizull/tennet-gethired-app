@@ -17,11 +17,14 @@ class MealsPage extends GetView<MealsController> {
         physics: const BouncingScrollPhysics(
             parent: AlwaysScrollableScrollPhysics()),
         slivers: [
+          // appbar
           const SliverPersistentHeader(
             floating: true,
             delegate: SilverHeaderDelegateWidget(),
             pinned: true,
           ),
+
+          // list
           MealsList(controller: controller)
         ],
       ),
