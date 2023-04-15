@@ -24,7 +24,7 @@ This repository contains the codebase for a diet tracking application built with
   flutter pub get
 ```
 
-### Run in Developer Env
+### Run Developer
 
 ```bash
   flutter run
