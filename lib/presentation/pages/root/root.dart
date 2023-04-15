@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
 
 import 'package:gethired/presentation/controllers/controllers.dart';
@@ -27,8 +28,9 @@ class RootPage extends StatelessWidget {
           ],
         ),
         floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
-        floatingActionButton: CenterPlusButton(
-            plusColor: AppColors.white,
+        floatingActionButton: FloatButtonWidget(
+            iconColor: AppColors.white,
+            icon: FontAwesomeIcons.plus,
             gradient: LinearGradient(
               colors: [AppColors.blue.shade100, AppColors.blue.shade800],
               begin: Alignment.bottomRight,

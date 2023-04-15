@@ -2,24 +2,25 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:gethired/utils/themes/colors_theme.dart';
 
-class CenterPlusButton extends StatelessWidget {
+class FloatButtonWidget extends StatelessWidget {
   static const defaultSplashColor = Color(0x33FFFFFF);
 
-  const CenterPlusButton({
+  const FloatButtonWidget({
     super.key,
     this.color,
     this.gradient,
-    this.plusColor,
+    this.iconColor,
     this.splashColor = defaultSplashColor,
     this.margin,
     this.padding,
     this.width,
     this.height,
     this.elevation = 0,
+    this.icon,
   });
 
   final Color? color;
-  final Color? plusColor;
+  final Color? iconColor;
   final Color? splashColor;
   final Gradient? gradient;
   final EdgeInsets? margin;
@@ -27,6 +28,7 @@ class CenterPlusButton extends StatelessWidget {
   final double? width;
   final double? height;
   final double? elevation;
+  final IconData? icon;
 
   @override
   Widget build(BuildContext context) {
@@ -42,11 +44,12 @@ class CenterPlusButton extends StatelessWidget {
         ),
         child: FloatingActionButton(
           onPressed: () {},
+          heroTag: null,
           backgroundColor: color ?? AppColors.transparent,
           shape: const StadiumBorder(),
           elevation: elevation,
           splashColor: splashColor,
-          child: Icon(FontAwesomeIcons.plus, color: plusColor),
+          child: Icon(icon, color: iconColor),
         ));
   }
 }

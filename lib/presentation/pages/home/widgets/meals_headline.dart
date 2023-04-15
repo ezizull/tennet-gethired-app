@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:get/get.dart';
+import 'package:gethired/presentation/routes/routes.dart';
 import 'package:gethired/utils/utils.dart';
 
 class MealsHeadline extends StatelessWidget {
@@ -16,6 +19,7 @@ class MealsHeadline extends StatelessWidget {
       children: [
         // breakfast
         CardImageWidget(
+          onTap: () => Get.toNamed(Routes.MEALS),
           gradient: LinearGradient(
             colors: [
               Colors.pink.shade100,
@@ -117,6 +121,7 @@ class MealsHeadline extends StatelessWidget {
 
         // lunch
         CardImageWidget(
+          onTap: () => Get.toNamed(Routes.MEALS),
           gradient: LinearGradient(
             colors: [
               Colors.blue.shade800,
@@ -218,6 +223,7 @@ class MealsHeadline extends StatelessWidget {
 
         // snack
         CardImageWidget(
+          onTap: () => Get.toNamed(Routes.MEALS),
           gradient: LinearGradient(
             colors: [
               Colors.red.shade500,
@@ -277,14 +283,15 @@ class MealsHeadline extends StatelessWidget {
                 ),
 
                 // satuan
-                CenterPlusButton(
+                FloatButtonWidget(
                   width: 32,
                   height: 32,
                   margin: const EdgeInsets.only(top: 15),
-                  plusColor: AppColors.red.shade400,
+                  iconColor: AppColors.red.shade400,
                   color: AppColors.white,
                   splashColor: AppColors.red.shade400.withOpacity(0.2),
                   elevation: 10,
+                  icon: FontAwesomeIcons.plus,
                 ),
               ],
             ),

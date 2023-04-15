@@ -11,8 +11,16 @@ class GetPages {
       page: () => const RootPage(),
       binding: RootBinding(),
     ),
+
+    // meals
+    GetPage(
+      name: Routes.MEALS,
+      page: () => const MealsPage(),
+      binding: MealsBinding(),
+    ),
   ];
 
+  // notfound
   static GetPage notFound = GetPage(
     name: Routes.NOTFOUND,
     page: () => const NotFoundPage(),

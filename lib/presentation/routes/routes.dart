@@ -8,4 +8,5 @@ class Routes {
   static const NOTFOUND = '/404';
 
   static const HOME = '/home';
+  static const MEALS = '/meals';
 }
