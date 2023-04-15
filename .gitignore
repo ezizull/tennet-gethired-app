@@ -39,7 +39,6 @@ migrate_working_dir/
 /build/app/kotlin/
 /build/app/snapshot/
 /build/app/tmp/
-/build/app/flutter-apk/
 
 !/build/web/
 !/build/app/
