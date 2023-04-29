@@ -1,7 +1,6 @@
 export 'package:gethired/utils/widgets/header_widget.dart';
-export 'package:gethired/utils/widgets/silver_header_delegate_widget.dart';
 
-export 'package:gethired/utils/widgets/appbar_wave_widget.dart';
+export 'package:gethired/utils/widgets/appbar_wave_widget/style_one_wave.dart';
 
 export 'package:gethired/utils/widgets/searchbar_widget.dart';
 

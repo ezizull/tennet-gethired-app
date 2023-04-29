@@ -3,8 +3,8 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
 import 'package:gethired/utils/utils.dart';
 
-class SilverHeaderDelegateWidget extends SliverPersistentHeaderDelegate {
-  const SilverHeaderDelegateWidget();
+class SilverHeaderDelegate extends SliverPersistentHeaderDelegate {
+  const SilverHeaderDelegate();
 
   @override
   Widget build(
@@ -22,7 +22,7 @@ class SilverHeaderDelegateWidget extends SliverPersistentHeaderDelegate {
     return Stack(
       children: [
         // background
-        const AppBarWaveWidget(
+        const StyleOneWave(
           height: 200,
         ),
 

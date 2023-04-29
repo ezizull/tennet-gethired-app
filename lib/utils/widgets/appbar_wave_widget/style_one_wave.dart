@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class AppBarWaveWidget extends StatelessWidget {
+class StyleOneWave extends StatelessWidget {
   static const defaultGradient = LinearGradient(
     colors: [Color(0xFF584DD4), Color(0xFF8D80E4)],
     begin: Alignment.bottomRight,
     end: Alignment.topLeft,
   );
 
-  const AppBarWaveWidget({
+  const StyleOneWave({
     Key? key,
     required this.height,
     this.gradient = defaultGradient,
@@ -21,7 +21,7 @@ class AppBarWaveWidget extends StatelessWidget {
     return SizedBox(
       height: height,
       child: ClipPath(
-        clipper: AppBarWaveWidgetClipper(),
+        clipper: StyleOneWaveClipper(),
         child: Container(
           width: MediaQuery.of(context).size.width,
           height: height,
@@ -32,7 +32,7 @@ class AppBarWaveWidget extends StatelessWidget {
   }
 }
 
-class AppBarWaveWidgetClipper extends CustomClipper<Path> {
+class StyleOneWaveClipper extends CustomClipper<Path> {
   @override
   Path getClip(Size size) {
     var path = Path();
@@ -52,5 +52,5 @@ class AppBarWaveWidgetClipper extends CustomClipper<Path> {
   }
 
   @override
-  bool shouldReclip(AppBarWaveWidgetClipper oldClipper) => oldClipper != this;
+  bool shouldReclip(StyleOneWaveClipper oldClipper) => oldClipper != this;
 }

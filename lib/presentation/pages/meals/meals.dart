@@ -5,6 +5,7 @@ import 'package:gethired/presentation/controllers/controllers.dart';
 import 'package:gethired/utils/utils.dart';
 
 import 'widgets/meals_list.dart';
+import 'widgets/silver_header_delegate.dart';
 
 class MealsPage extends GetView<MealsController> {
   const MealsPage({super.key});
@@ -20,7 +21,7 @@ class MealsPage extends GetView<MealsController> {
           // appbar
           const SliverPersistentHeader(
             floating: true,
-            delegate: SilverHeaderDelegateWidget(),
+            delegate: SilverHeaderDelegate(),
             pinned: true,
           ),
 
