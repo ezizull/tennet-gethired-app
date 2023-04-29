@@ -40,8 +40,9 @@ migrate_working_dir/
 /build/app/snapshot/
 /build/app/tmp/
 
-!/build/web/
-!/build/app/
+# Except
+# !/build/web/
+# !/build/app/
 
 # Symbolication related
 app.*.symbols
